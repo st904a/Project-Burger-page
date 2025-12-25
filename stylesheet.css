@@ -1,0 +1,276 @@
+/* Сбрасываем все отступы всех элементов */
+* {
+  padding: 0;
+  margin: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+/* В размер блоков будут включены padding + border */
+html {
+  box-sizing: border-box;
+}
+/* Для страницы установим отступы сверху 0, по горизонтали auto*/
+body {
+  margin: 0 auto;
+  height: 100%; /* высота 100% от родительского элемента */
+  flex-direction: column; /* все контейнеры идут вертикально */
+  font-weight: 500; /* толщина шрифтов*/
+  font-size: 26px;
+  line-height: 38px;
+  color: black;
+  background: white;
+}
+.page_header {
+  width: 100%;
+  min-height: auto;
+  background: linear-gradient(
+    180deg,
+    #eda418 47.4%,
+    rgba(237, 164, 24, 0) 100%
+  );
+}
+.navigation {
+  display: flex;
+  flex-wrap: wrap; /* переместить элементы  на другую строку если не помещаются*/
+  justify-content: center;
+  min-height: 70px;
+  padding-top: 5px;
+  /* padding-right: 65px; */
+}
+.logo {
+  display: block;
+  margin-top: 8px;
+}
+.navigation_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: auto 0;
+  /* padding: 0; */
+  margin-left: 25px; /*Раздвигает логотип и список
+  list-style: none; */
+}
+.navigation_main {
+  display: block;
+  min-width: 200px;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 30px; /* промежуток между строк на узких экранах */
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+.navigation_button {
+  display: block;
+  background: #eda418;
+  border: transparent;
+}
+.nav_menu_basket_img {
+  width: 60px;
+  height: 60px;
+}
+
+.container_page_header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* width: 100%; */
+  /* padding-top: 25px;
+  gap: 20px;*/
+  /* padding-left: 300px;  */
+}
+.text_header_lists {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  /* margin-left: 40px; */
+  /* width: 600px; */
+  margin: 0;
+  padding: 0;
+  /* list-style: none; */
+}
+
+.text_header {
+  font-family: Montserrat;
+  font-weight: 800;
+  font-size: 32px;
+  width: 470px;
+  margin: 0;
+  padding: 0;
+  padding-top: 190px;
+  line-height: 40px;
+}
+.text_header_discount {
+  font-size: 16px;
+  font-weight: 400;
+}
+.container_button_header {
+  display: block;
+  /* width: fit-content; */
+  /* height: 40px; */
+  background-color: #e52626;
+  border: transparent;
+  border-radius: 50px;
+  font-size: 24px;
+  font-weight: 400;
+  padding: 20px;
+  margin: 0;
+}
+.container_button_header a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Основной блок */
+
+.main {
+  width: 100%;
+  /* height: 900px; */
+
+  height: auto;
+  text-align: center;
+  /* width: 1900px;
+  height: 900px; */
+}
+.container_catalog {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.catalog_title {
+  color: black;
+  font-family: Montserrat;
+  font-weight: 800;
+  margin-bottom: 60px;
+}
+.catalog_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: auto 0;
+  justify-content: center;
+  background: white;
+}
+/* .catalog_item { портит центрирование на малых экранах
+  width: 450px;
+} */
+
+.catalog_burger {
+  font: 1.3em sans-serif;
+  padding: 10px 0;
+}
+
+/* footer */
+.page_footer {
+  width: 100%;
+  height: auto;
+  background: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, #eda61d 100%);
+  text-align: center;
+}
+
+.footer_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 100px;
+  font-size: 20px;
+  line-height: 25px;
+  margin-top: 150px;
+}
+
+.footer_title {
+  margin: 0;
+  padding: 0;
+}
+
+.footer_page_text {
+  margin-top: 20px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.footer_text {
+  padding-top: 25px;
+}
+
+.footer_contacts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 25px;
+  padding-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .img {
+    width: 85%;
+    height: 85%;
+  }
+  .text_header {
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 26px;
+    width: 470px;
+  }
+  .footer_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    font-size: 20px;
+    line-height: 25px;
+    margin-top: 50px;
+  }
+  .catalog_title {
+    font-weight: 600;
+    margin-bottom: 30px;
+    font-size: 36px;
+  }
+  .catalog_burger {
+    font: 1em sans-serif;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 480px) {
+  .img {
+    width: 85%;
+    height: 85%;
+  }
+  .text_header {
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 26px;
+    width: 100%;
+  }
+  .footer_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    font-size: 20px;
+    line-height: 25px;
+    margin-top: 50px;
+  }
+
+  .img {
+    width: 85%;
+    height: 85%;
+  }
+  .catalog_title {
+    font-weight: 600;
+    margin-bottom: 30px;
+    font-size: 36px;
+  }
+  .catalog_burger {
+    font: 1em sans-serif;
+    font-weight: bold;
+  }
+}
